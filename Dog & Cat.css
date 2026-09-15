@@ -25,7 +25,7 @@ img {
 }
 
 .scratch {
-  position: fixed;
+  position: absolute;
   width: 45%;
   top: 0%;
   left: 55%;
