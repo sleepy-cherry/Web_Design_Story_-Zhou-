@@ -1,0 +1,383 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #181D24;
+}
+
+.container {
+    position: relative;
+    background-color: #181D24;
+}
+
+/* ---------------- IMAGES ---------------- */
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cat {
+  position: absolute;
+  width: 35%;
+  top: 3%;
+  left: 3%;
+}
+
+.scratch {
+  position: fixed;
+  width: 45%;
+  top: 0%;
+  left: 55%;
+  z-index: 10;
+}
+
+.home {
+    position: fixed;
+    width: 15%;
+    top: 0%;
+    left: 0%;
+    z-index: 10;
+}
+
+.home-default, .home-hover {
+    width: 100%;
+}
+
+.home-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.home:hover .home-hover {
+    opacity: 1;
+}
+
+.home:hover .home-default {
+    opacity: 0;
+}
+
+.back {
+    position: fixed;
+    width: 15%;
+    top: 0%;
+    right: 0%;
+    z-index: 10;
+}
+
+.back-default, .back-hover {
+    width: 100%;
+}
+
+.back-hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.back:hover .back-hover {
+    opacity: 1;
+}
+
+.back:hover .back-default {
+    opacity: 0;
+}
+
+.home-default, .home-hover {
+    width: 100%;
+}
+
+.home-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.home:hover .home-hover {
+    opacity: 1;
+}
+
+.home:hover .home-default {
+    opacity: 0;
+}
+
+.continue {
+    position: fixed;
+    width: 15%;
+    bottom: 0%;
+    right: 0%;
+    z-index: 10;
+}
+
+.continue-default, .continue-hover {
+    width: 100%;
+}
+
+.continue-hover {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.continue:hover .continue-hover {
+    opacity: 1;
+}
+
+.continue:hover .continue-default {
+    opacity: 0;
+}
+
+
+.shoes {
+    width: 45%;
+    position: absolute;
+    /* vh (viewport height) does not care about container size allowing for scaling based on viewport size */
+    margin: 10% 0 0 0;
+}
+
+.beef {
+    position: absolute;
+    width: 50%;
+    margin: 60% 0 0 55%;
+    z-index: 1;
+}
+
+.cook {
+    position: absolute;
+    width: 50%;
+    margin: 99% 0 0 50%;
+    z-index: 1;
+}
+
+/* ---------------- TEXT ---------------- */
+
+.house {
+  font-family: "Notable", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  /* clamp(MINIMUM, PREFERRED, MAXIMUM) 
+        makes the font size responsive to the viewport width, but also sets a minimum and maximum size. 
+        180px is the maximum size, 40px is the minimum size, and 10vw is the preferred size based on the viewport width.
+    */
+  font-size: clamp(40px, 10vw, 180px);
+  margin: 0;
+
+/* use % instead of px for content to scale with screen size */
+  top: 40%;
+  left: 28%;
+
+  position: absolute;
+  color: black;
+/* prevents hyperlink from underlining */
+  text-decoration: none;
+/* for hovering over: eases in scale transformation and color change */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.house:hover {
+  transform: scale(1.1);
+  color: crimson;
+}
+
+.chapter {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+
+  font-size: clamp(12px, 2vw, 30px);
+  margin: 0;
+  top: 40%;
+  left: 38%;
+  position: absolute;
+}
+
+ .p3t {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: clamp(4px, 1.5vw, 13px);
+
+    background-image: url("images/P3T.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    position: absolute;
+
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+.p1 {
+    width: 45%;
+    margin: 20% 0 0 50%;
+    z-index: 5;
+}
+
+.p2 {
+    width: 45%;
+    margin: 40% 0 0 35%;
+    z-index: 4;
+}
+
+.min3 {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: clamp(4px, 1.5vw, 13px);
+
+    background-image: url("images/MIN3.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    position: absolute;
+
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+.p3 {
+    width: 50%;
+    margin: 60% 0 0 5%;
+    z-index: 3;
+}
+
+.p4 {
+    width: 55%;
+    margin: 80% 0 0 17%;
+    z-index: 2;
+}
+
+.t3mpr {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: clamp(4px, 1.5vw, 13px);
+
+    background-image: url("images/T3MPR.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    position: absolute;
+
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+.p5 {
+    width: 50%;
+    margin: 105% 0 0 5%;
+    z-index: 3;
+}
+
+.paragraph {
+    text-align: justify;
+    line-height: 1.5;
+    margin: 20px 0 -5px 0;
+}
+
+/* scaling story canvas */
+@media (max-width: 1400px) {
+    .story-page {
+        width: 1920px;
+        height: 2500px;
+        min-height: 2500px;
+        transform: scale(calc(100vw / 1920px));
+        transform-origin: top left;
+    }
+
+    .story-page .home {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 288px;
+    }
+
+    .story-page .shoes {
+        top: 192px;
+        left: 0;
+        width: 864px;
+        margin: 0;
+    }
+
+    .story-page .p1,
+    .story-page .p2,
+    .story-page .p3,
+    .story-page .p4,
+    .story-page .p5,
+    .story-page .beef {
+        margin: 0;
+    }
+
+    .story-page .p1 {
+        top: 384px;
+        left: 960px;
+        width: 864px;
+        height: 360px;
+    }
+
+    .story-page .p2 {
+        top: 768px;
+        left: 672px;
+        width: 864px;
+        height: 360px;
+    }
+
+    .story-page .beef {
+        top: 1152px;
+        left: 1056px;
+        width: 960px;
+    }
+
+    .story-page .p3 {
+        top: 1152px;
+        left: 96px;
+        width: 960px;
+        height: 360px;
+    }
+
+    .story-page .p4 {
+        top: 1536px;
+        left: 326px;
+        width: 1056px;
+        height: 480px;
+    }
+
+    .story-page .p5 {
+        top: 2016px;
+        left: 96px;
+        width: 960px;
+        height: 480px;
+    }
+
+    .story-page .p3t,
+    .story-page .min3 {
+        padding: 96px;
+        font-size: 13px;
+        overflow: hidden;
+    }
+
+    .story-page .paragraph {
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    .story-page .continue {
+        position: absolute;
+        top: 2300px;
+        right: 0;
+        bottom: auto;
+        width: 288px;
+    }
+}
