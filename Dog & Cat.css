@@ -380,7 +380,7 @@ img {
 .story-page {
     width: 1920px;
     height: 1800px;
-    min-height: 1500px;
+    min-height: 1800px;
     /* clamp() puts a FLOOR (0.6) and CEILING (1) on the scale.
        Without the floor, scale keeps shrinking as the window gets
        narrower, so the 13px text shrinks right along with it.
