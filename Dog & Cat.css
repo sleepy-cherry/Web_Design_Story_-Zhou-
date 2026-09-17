@@ -2,9 +2,6 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: #181D24;
-  /* lets the page scroll sideways once the scaled canvas (below) is
-     wider than the screen, instead of squishing anything */
-  overflow-x: auto;
 }
 
 .container {
