@@ -691,7 +691,7 @@ img {
     /* the text boxes are scrollable if the text is too long to fit in the box */
 
     .story-page .p3t .paragraph,
-    .story-page .min3 .paragraph {
+    .story-page .min3 .paragraph, .story-page .t3mpr .paragraph {
         height: 100%;
         overflow-x: hidden;
         overflow-y: scroll;
