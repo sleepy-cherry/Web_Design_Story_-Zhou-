@@ -282,7 +282,6 @@ img {
 .sink {
     width: 30%;
     position: absolute;
-    /* vh (viewport height) does not care about container size allowing for scaling based on viewport size */
     margin: 15% 0 0 10%;
     animation: float 3s infinite;
     filter: drop-shadow(20px 20px 0px rgba(0, 0, 0, 1));
@@ -400,6 +399,7 @@ img {
 
 .arrow1-hover {
     position: absolute;
+    /* Experienced positioning inssues with arrows */
     top: 0;
     left: 0;
     right: 0;
@@ -749,7 +749,9 @@ img {
   color: red;
 }
 
-/* story canvas layout â€” applies at all screen widths.
+/* ---------------- EXACT SIZING AND POSITIONING ---------------- */
+
+/* story canvas layout applies at all screen widths.
    clamp() below handles the shrinking/capping, so this no longer
    needs to be limited to narrow screens with a media query. */
 .story-page {
@@ -906,19 +908,6 @@ img {
         margin: 0;
     }
     
-
-    /* the text boxes are scrollable if the text is too long to fit in the box */
-
-    .story-page .p3t .paragraph,
-    .story-page .min3 .paragraph, .story-page .t3mpr .paragraph, .story-page .tales .paragraph {
-        height: 100%;
-        overflow-x: hidden;
-        overflow-y: scroll;
-        overscroll-behavior: contain;
-        box-sizing: border-box;
-        background: transparent;
-    }
-
 .story-page .continue {
     position: absolute;
     top: 2300px;
@@ -963,3 +952,13 @@ img {
     width: 150px;
 }
     
+
+    /* the text boxes are scrollable if the text is too long to fit in the box */
+.story-page .p3t .paragraph, .story-page .min3 .paragraph, .story-page .t3mpr .paragraph, .story-page .tales .paragraph {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+    box-sizing: border-box;
+    background: transparent;
+}
