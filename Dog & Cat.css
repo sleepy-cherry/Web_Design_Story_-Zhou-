@@ -111,6 +111,10 @@ html, body {
   --caret: currentcolor;
 }
 
+.typewriter3 {
+  --caret: currentcolor;
+}
+
 .typewriter::before {
   content: "";
   animation: typing-sleeping 3s steps(20) forwards;
@@ -141,12 +145,31 @@ html, body {
   animation: blink 0.5s linear infinite;
 }
 
+.typewriter3::before {
+  content: "";
+  animation: typing-ts 3s steps(11) forwards;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.typewriter3::after {
+  content: "";
+  border-right: 1ch solid var(--caret);
+  animation: blink 0.5s linear infinite;
+}
+
 .red-text.sleep.typewriter::before {
   content: "\201CWere you sleeping?\201D";
 }
 
 .red-text.order.typewriter2::before {
   content: "\201C Don't take stuff out of order.\201D";
+}
+
+.red-text.ts.typewriter3::before {
+  content: "...tssssss";
 }
 
 @keyframes typing-sleeping {
@@ -159,13 +182,17 @@ html, body {
   to { width: 32ch; }
 }
 
+@keyframes typing-ts {
+  from { width: 0; }
+  to { width: 11ch; }
+}
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
 
-/* ---------------- IMAGES ---------------- */
+/* ---------------- GIFS ---------------- */
 
 img {
   width: 100%;
@@ -191,125 +218,6 @@ img {
   animation: flicker 6s infinite;
 }
 
-.home {
-    position: absolute;
-    width: 15%;
-    top: 0%;
-    left: 0%;
-    z-index: 10;
-}
-
-/* ---------------- BUTTONS ---------------- */
-/* -------- HOME --------- */
-.home-default, .home-hover {
-    width: 100%;
-}
-
-.home-hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.home:hover .home-hover {
-    opacity: 1;
-}
-
-.home:hover .home-default {
-    opacity: 0;
-}
-
-/* -------- BACK --------- */
-.back {
-    position: absolute;
-    width: 15%;
-    top: 0%;
-    right: 0%;
-    z-index: 10;
-}
-
-.back-default, .back-hover {
-    width: 100%;
-}
-
-.back-hover {
-    position: absolute;
-    top: 0;
-    right: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.back:hover .back-hover {
-    opacity: 1;
-}
-
-.back:hover .back-default {
-    opacity: 0;
-}
-
-/* -------- ARROWS --------- */
-.arrow {
-    position: absolute;
-    width: 15%;
-    bottom: 0%;
-    right: 0%;
-    z-index: 10;
-}
-
-.arrow-default, .arrow-hover {
-    width: 100%;
-}
-
-.arrow-hover {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.arrow:hover .arrow-hover {
-    opacity: 1;
-}
-
-.arrow:hover .arrow-default {
-    opacity: 0;
-}
-
-
-/* -------- CONTINUE --------- */
-.continue {
-    position: absolute;
-    width: 15%;
-    bottom: 0%;
-    right: 0%;
-    z-index: 10;
-}
-
-.continue-default, .continue-hover {
-    width: 100%;
-}
-
-.continue-hover {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.continue:hover .continue-hover {
-    opacity: 1;
-}
-
-.continue:hover .continue-default {
-    opacity: 0;
-}
-
-/* -------- BUTTONS END --------- */
 .shoes {
     width: 45%;
     position: absolute;
@@ -371,6 +279,239 @@ img {
   z-index: 0;
 }
 
+.sink {
+    width: 30%;
+    position: absolute;
+    /* vh (viewport height) does not care about container size allowing for scaling based on viewport size */
+    margin: 15% 0 0 10%;
+    animation: float 3s infinite;
+    filter: drop-shadow(20px 20px 0px rgba(0, 0, 0, 1));
+}
+
+.player-pg4 {
+    width: 50%;
+    position: absolute;
+    left: 23%;
+    top: 200px;
+}
+
+/* ---------------- BUTTONS ---------------- */
+/* -------- HOME --------- */
+.home {
+    position: absolute;
+    width: 15%;
+    top: 0%;
+    left: 0%;
+    z-index: 10;
+}
+
+.home-default, .home-hover {
+    width: 100%;
+}
+
+.home-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.home:hover .home-hover {
+    opacity: 1;
+}
+
+.home:hover .home-default {
+    opacity: 0;
+}
+
+/* -------- BACK --------- */
+.back {
+    position: absolute;
+    width: 15%;
+    top: 0%;
+    right: 0%;
+    z-index: 10;
+}
+
+.back-default, .back-hover {
+    width: 100%;
+}
+
+.back-hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.back:hover .back-hover {
+    opacity: 1;
+}
+
+.back:hover .back-default {
+    opacity: 0;
+}
+
+/* -------- ARROWS --------- */
+.arrow {
+    position: absolute;
+    width: 288px;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.arrow-default, .arrow-hover {
+    width: 100%;
+}
+
+.arrow-hover {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.arrow:hover .arrow-hover {
+    opacity: 1;
+}
+
+.arrow:hover .arrow-default {
+    opacity: 0;
+}
+
+/* ----------------- */
+.arrow1 {
+    position: absolute;
+    width: 288px;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.arrow1-default, .arrow1-hover {
+    width: 250%;
+}
+
+.arrow1-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.arrow1:hover .arrow1-hover {
+    opacity: 1;
+}
+
+.arrow1:hover .arrow1-default {
+    opacity: 0;
+}
+
+/* ----------------- */
+.arrow2 {
+    position: absolute;
+    width: 288px;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.arrow2-default, .arrow2-hover {
+    width: 150%;
+}
+
+.arrow2-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.arrow2:hover .arrow2-hover {
+    opacity: 1;
+}
+
+.arrow2:hover .arrow2-default {
+    opacity: 0;
+}
+
+/* ----------------- */
+.arrow3 {
+    position: absolute;
+    width: 288px;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.arrow3-default, .arrow3-hover {
+    width: 250%;
+}
+
+.arrow3-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.arrow3:hover .arrow3-hover {
+    opacity: 1;
+}
+
+.arrow3:hover .arrow3-default {
+    opacity: 0;
+}
+
+/* -------- CONTINUE --------- */
+.continue {
+    position: absolute;
+    width: 15%;
+    bottom: 0%;
+    right: 0%;
+    z-index: 10;
+}
+
+.continue-default, .continue-hover {
+    width: 100%;
+}
+
+.continue-hover {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.continue:hover .continue-hover {
+    opacity: 1;
+}
+
+.continue:hover .continue-default {
+    opacity: 0;
+}
+
+/* -------- BUTTONS END --------- */
+
+
 /* ---------------- TEXT ---------------- */
 
 .house {
@@ -425,6 +566,23 @@ img {
   position: absolute;
 }
 
+.tales {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 25px;
+
+    background-image: url("images/Player.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+
+    position: absolute;
+
+    padding: 4%;
+    box-sizing: border-box;
+    filter: drop-shadow(20px 20px 0px rgba(0, 0, 0, 1));
+}
+
 .by {
   font-family: "Press Start 2P", system-ui;
   font-weight: 400;
@@ -433,7 +591,8 @@ img {
   font-size: clamp(12px, 2vw, 30px);
   margin: 0;
   top: 61%;
-  left: 24%;
+  left: 50%;
+  transform: translateX(-50%);
   position: absolute;
   color: azure;
 }
@@ -466,25 +625,12 @@ img {
     z-index: 5;
 }
 
-.p7 {
+.p7, .p8, .p9, .p10, .p11, .p12, .p13 {
     width: 45%;
     z-index: 2;
 }
 
-.p8 {
-    width: 45%;
-    z-index: 2;
-}
 
-.p9 {
-    width: 45%;
-    z-index: 2;
-}
-
-.p10 {
-    width: 45%;
-    z-index: 2;
-}
 
 .min3 {
     font-family: "Roboto Mono", monospace;
@@ -583,6 +729,11 @@ img {
 .red-text.order {
     top: 1500px;
     left: 340px;
+}
+
+.red-text.ts {
+    top: 240px;
+    left: 600px;
 }
 
 .story-links {
@@ -712,10 +863,31 @@ img {
     }
 
   .story-page .p10 {
-        top: 1536px;
-        left: 150px;
+        top: 400px;
+        left: 850px;
         width: 960px;
-        height: auto;
+        height: 480px;
+    }
+
+    .story-page .p11 {
+        top: 720px;
+        left: 710px;
+        width: 864px;
+        height: 405px;
+    }
+
+    .story-page .p12 {
+        top: 1152px;
+        left: 900px;
+        width: 960px;
+        height: 480px;
+    }
+
+    .story-page .p13 {
+        top: 200px;
+        left: 500px;
+        width: 960px;
+        height: 800px;
     }
 
     .story-page .p3t{
@@ -726,15 +898,19 @@ img {
         padding: 100px 60px 90px;
     }
 
+    .story-page .tales{
+        padding: 300px 180px 50px;
+    }
 
     .story-page .paragraph {
         margin: 0;
     }
+    
 
     /* the text boxes are scrollable if the text is too long to fit in the box */
 
     .story-page .p3t .paragraph,
-    .story-page .min3 .paragraph, .story-page .t3mpr .paragraph {
+    .story-page .min3 .paragraph, .story-page .t3mpr .paragraph, .story-page .tales .paragraph {
         height: 100%;
         overflow-x: hidden;
         overflow-y: scroll;
@@ -743,12 +919,47 @@ img {
         background: transparent;
     }
 
-    .story-page .continue, .story-page .arrow {
-        position: absolute;
-        top: 2300px;
-        right: 0;
-        bottom: auto;
-        width: 288px;
-    }
+.story-page .continue {
+    position: absolute;
+    top: 2300px;
+    right: 0;
+    bottom: auto;
+    width: 288px;
+}
 
+.story-page .arrow {
+    position: absolute;
+    top: 1250px;
+    left: 25%;
+    transform: translateX(-50%);
+    bottom: auto;
+    width: 150px;
+}
+
+.story-page .arrow1 {
+    position: absolute;
+    top: 1050px;
+    left: 15%;
+    transform: translateX(-50%);
+    bottom: auto;
+    width: 150px;
+}
+    
+.story-page .arrow2 {
+    position: absolute;
+    top: 1050px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: auto;
+    width: 150px;
+}
+    
+.story-page .arrow3 {
+    position: absolute;
+    top: 1050px;
+    left: 75%;
+    transform: translateX(-50%);
+    bottom: auto;
+    width: 150px;
+}
     
